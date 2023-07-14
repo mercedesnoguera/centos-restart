@@ -1,0 +1,11 @@
+---
+-name: Restart redis service
+  hosts: centos
+  become: true
+
+  tasks:
+    - name: Restart the service
+      service:
+        name: redis
+        state: restarted
+
